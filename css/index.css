@@ -1,0 +1,320 @@
+body{
+	width: 100vw;
+	height: 100vh;
+	background-color: #e6edea;
+}
+body>.wrap{
+	width: 97%;
+	height: 94%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background: url(../img/bg01.jpg);
+	background-size: 100% 100%;
+	transition: 2s;
+}
+
+@font-face {
+	font-family:md;
+	src: url(../font/MillerDisplay-Light.otf);
+}
+@font-face {
+	font-family:gt;
+	src: url(../font/GT-Walsheim.otf);
+}
+@font-face {
+	font-family:gtl;
+	src: url(../font/GT-Walsheim-Light.otf);
+}
+@font-face {
+	font-family:gtm;
+	src: url(../font/GT-Medium.otf);
+}
+
+/*hearder的样式*/
+.header{
+	width: 100%;
+	height: 60px;
+	position: absolute;
+	top: 0px;
+	left: 0;
+	background-color: #e5ece9;
+	z-index: 2;
+	opacity: 0;
+	transition: 1s;
+}
+.header .icon{
+	cursor: pointer;
+	float: left;
+	margin-top: 15px;
+	
+}
+.header .menu{
+	font: 14px gt;
+	color: #4a5a5c;
+}
+.header .menu img{
+	margin-left: 25px;
+	margin-right: 15px;
+}
+.header .buy{
+	margin-left: 87%;
+}
+.header .search{
+	margin-left: 1%;
+}
+
+/*左边菜单的样式*/
+.left,.right{
+	width: 40%;
+	height: 100vh;
+	background-color:#fbfbfb;
+	position: fixed;
+	left: -40%;
+	top: 0;
+	transition: 1s;
+	z-index: 3;
+}
+.left>.icon{
+	margin-left: 8%;
+	margin-top:35px;
+	cursor: pointer;
+	
+}
+.left .top,
+.left .bottom{
+	width: 83%;
+	height: 275px;
+	margin: 0 auto;
+}
+.left .top{
+	margin-top: 50px;
+}
+.left h2,.right h2{
+	font: 40px md;
+	color: #4a5a5c;
+}
+.left a{
+	width: 43%;
+	display: inline-block;
+	text-decoration: none;
+	color: #aaaaaa;
+	margin: 10px 5px 5px 0px;
+	padding-left: 22px;
+	font: 15px gt;
+	border-left: 3px solid #fbfbfb;
+}
+.left a:nth-of-type(even){
+	margin-right: 0px;
+}
+.left .active,.left a:hover{
+	border-left: 3px solid #a1a9aa;
+	color: #5d5d5d;
+}
+.left .search,
+.left .account{
+	font-size: 20px;
+	padding-top: 0px ;
+	border-bottom: 1px solid #a1a9aa;
+}
+.left .search:hover,
+.left .account:hover{
+	border-left: 3px solid #fbfbfb;
+}
+.mask{
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	right: 0;
+	display: none;
+	background-color: black;
+	opacity: 0.3;
+	z-index: 2;
+}
+
+
+/*右边登录框的样式*/
+.right{
+	position: fixed;
+	/*left: 1366px;*/
+	left: 100%;
+	top: 0;
+}
+.right .wrap{
+	width: 83%;
+	height: 850px;
+	margin: 30px auto;
+}
+.right span{
+	display: inline-block;
+	font: 14px gtl;
+	color: #abb2b3;
+	margin-bottom: 55px;
+}
+.right .icon{
+	float: right;
+	padding-top: 4px;
+	cursor: pointer;
+}
+.right .cart{
+	margin-right: 15px;
+}
+.right .myBag{
+	width:100% ;
+	height: 300px;
+	margin-top: 50px;
+}
+.myBag img{
+	float: left;
+
+}
+.myBag h3{
+	font: 20px gt;
+	margin:0px 0px 15px 35px;
+	color:#5d5d5d;
+}
+
+.myBag p{
+	font: 15px gt;
+	color:#5d5d5d ;
+}
+
+.right a{
+	font: 20px gt;
+	color:#aaaaaa;
+	display: block;
+	margin-bottom: 10px;
+	text-decoration: none;
+}
+
+.right a:hover{
+	color:#5d5d5d ;
+}
+.right hr{
+	margin-bottom: 30px;
+}
+
+/*中间的搜索栏*/
+.middle{
+	width: 100%;
+	height: 230px;
+	background-color:white;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+	z-index:2;
+}
+.middle .top{
+	width: 58%;
+	height: 60px;
+	background-color: #e5ece9;
+	padding-left: 43%;
+}
+.middle img{
+	margin: -20px 10px 0;
+}
+.middle input{
+	border: none;
+	height: 58px;
+	background-color:#e5ece9;
+	outline: none;
+	font: 40px md;
+	color: #4a5a5c;
+}
+.middle ul li{
+	text-align: center;
+}
+.middle ul a{
+	font: 15px gtl;
+	color: #aaa;
+	text-decoration: none;
+}
+.middle ul li:nth-of-type(1) a{
+	display: block;
+	color:#5d5d5d;
+	margin-top: 35px;
+}
+.middle ul li:nth-last-of-type(1){
+	display: block;
+	color:#5d5d5d;
+	margin-top: 13px;
+	font: 18px gt;
+	letter-spacing: 1px;
+}
+.middle ul li:hover{
+	color:#5d5d5d;
+}
+
+/*左右导航*/
+.navl,.navr{
+	width: 50%;
+	height: 100%;
+	background: rgba(0,0,0,0);
+	float: left;
+	text-align: center;
+	/*z-index: 1;*/
+	position: absolute;
+}
+.navr{
+	left: 50%;
+	top: 0;
+}
+.navl h1,.navr h1{
+	margin-top: 255px;
+	font: 60px md;
+	color: #fff;
+}
+.navl .items,.navr .items{
+	width: 350px;
+	border-top: 2px solid white;
+	margin: 7px auto;
+	display: none;
+}
+.items a{
+	text-decoration: none;
+	font: 15px gt;
+	color: #fff;
+	display: inline-block;
+	margin: 13px 40px;
+}
+.items a:hover{
+	color: #E6E6E6;
+}
+
+/*中间*/
+.navm{
+	width: 26%;
+	height: 100%;
+	position: absolute;
+	left: 37%;
+	top: 0;
+	text-align: center;
+	transition: 1s;
+}
+.navm .logo{
+	margin-top:9%;
+	transition:1s;
+	position: absolute;
+	left: 42%;
+	top: 0;
+	z-index: 1;
+}
+.navm h1{
+	font: 60px md;
+	color: #fff;
+	
+	position: absolute;
+	left: 0;
+	top: 300px;
+}
+.navm .logotype{
+	position: absolute;
+	left: 25%;
+	top: 490px;
+	z-index: 1;
+}
